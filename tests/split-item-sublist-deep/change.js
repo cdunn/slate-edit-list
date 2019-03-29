@@ -1,15 +1,15 @@
 import expect from 'expect';
 
-export default function(plugin, change) {
-    plugin.changes.splitListItem(change);
+export default function(plugin, editor) {
+    plugin.changes.splitListItem(editor);
 
     // check new selection
-    const selectedNode = change.value.document.getTexts().get(2);
-    const selectedNodePath = change.value.document
+    const selectedNode = editor.value.document.getTexts().get(2);
+    const selectedNodePath = editor.value.document
         .getPath(selectedNode.key)
         .toJS();
 
-    expect(change.value.selection.toJS()).toMatchObject({
+    expect(editor.value.selection.toJS()).toMatchObject({
         object: 'selection',
         anchor: {
             object: 'point',
@@ -25,5 +25,5 @@ export default function(plugin, change) {
         marks: null
     });
 
-    return change;
+    return editor;
 }

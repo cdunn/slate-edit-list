@@ -1,3 +1,3 @@
-export default function(plugin, change) {
-    return plugin.changes.splitListItem(change);
+export default function(plugin, editor) {
+    return plugin.changes.splitListItem(editor);
 }

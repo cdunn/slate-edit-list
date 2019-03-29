@@ -1,6 +1,6 @@
 import expect from 'expect';
 
-export default function(plugin, change) {
+export default function(plugin, editor) {
     const ret = plugin.onKeyDown(
         {
             preventDefault: () => {},
@@ -8,8 +8,8 @@ export default function(plugin, change) {
             key: 'Enter',
             shiftKey: true
         },
-        change,
-        {}
+        editor,
+        () => {}
     );
 
     expect(ret == null).toBe(true);

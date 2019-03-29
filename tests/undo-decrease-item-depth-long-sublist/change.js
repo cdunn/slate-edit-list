@@ -1,10 +1,10 @@
 import expect from 'expect';
 
-export default function(plugin, change) {
-    change.call(plugin.changes.decreaseItemDepth).undo();
+export default function(plugin, editor) {
+    editor.command(plugin.changes.decreaseItemDepth).undo();
 
     // Back to previous cursor position
-    expect(change.value.startBlock.text).toEqual('Item 1.1');
+    expect(editor.value.startBlock.text).toEqual('Item 1.1');
 
-    return change;
+    return editor;
 }

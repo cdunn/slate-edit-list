@@ -1,4 +1,4 @@
-export default function(plugin, change) {
+export default function(plugin, editor) {
     const data = { style: { listStyleType: 'disc' } };
-    return change.call(plugin.changes.wrapInList, false, data);
+    return editor.command(plugin.changes.wrapInList, false, data);
 }

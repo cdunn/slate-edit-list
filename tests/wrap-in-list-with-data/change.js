@@ -1,4 +1,4 @@
-export default function(plugin, change) {
+export default function(plugin, editor) {
     const data = { style: { listStyleType: 'decimal' } };
-    return change.call(plugin.changes.wrapInList, 'ol_list', data);
+    return editor.command(plugin.changes.wrapInList, 'ol_list', data);
 }

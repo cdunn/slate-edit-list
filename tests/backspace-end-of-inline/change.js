@@ -1,13 +1,13 @@
-export default function(plugin, change) {
+export default function(plugin, editor) {
     plugin.onKeyDown(
         {
             preventDefault: () => {},
             stopPropagation: () => {},
             key: 'Backspace'
         },
-        change,
-        {}
+        editor,
+        () => {}
     );
 
-    return change;
+    return editor;
 }
