@@ -1,7 +1,7 @@
 {
   "name": "@tildepage/slate-edit-list",
   "description": "A Slate plugin to handle keyboard events in lists.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "Apache-2.0",
   "repository": "git://github.com/cdunn/slate-edit-list.git",
   "main": "./dist/index.js",
